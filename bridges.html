@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+<head>
+	<title>Bridges</title>
+	<link rel="stylesheet" type="text/css" href="identities.css">
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+	<div class="top-banner">
+		<a href="javascript:history.back()" aria-label="Go back to previous page">
+			<img src="Group 5.png" alt="Go Back" class="logo" title="Go Back">
+		</a>
+	</div>
+	<div class="top-banner">
+		<nav class="nav-menu">
+			<a href="voyage.html">Voyage</a>
+			<a href="identities.html">Identities</a>
+			<a href="bridges.html">Bridges</a>
+			<a href="eras.html">Eras</a>
+			<a href="showtime.html">Showtime</a>
+		</nav>
+	</div>
+
+	<h1>Bridges</h1>
+	<h2>If you like Good Neighbours</h2>
+	
+	<div class="flex-container">
+		<img src="good-neighbours.jpeg" alt="Good Neighbours" class="logo" style="height: 200px;">
+	</div>
+
+	<h2>You might also like</h2>
+	
+	<div class="music-map">
+		<div id="center">Good Neighbours</div>
+		<a href="https://open.spotify.com/artist/3l0CmX0FuQjFxr8SK7Vqag?si=bvjuuWOrSce2F2nINirMWg" target="_blank" id="artist1" class="map-artist">Clairo</a>
+		<a href="https://open.spotify.com/artist/4tuJ0bMpJh08umKkEXKUI5?si=-XuJQZazRYK5-jgdV7DCpQ" target="_blank" id="artist2" class="map-artist">Gracie Abrams</a>
+		<a href="https://open.spotify.com/artist/7wbkl3zgDZEoZer357mVIw?si=UZpDsGP9QcWUOn8YlVFKLQ" target="_blank" id="artist3" class="map-artist">Boy Pablo</a>
+		<a href="https://open.spotify.com/artist/7pbDxGE6nQSZVfiFdq9lOL?si=rKvjw8jwQS-yctvB-U5ccg" target="_blank" id="artist4" class="map-artist">Rex Orange County</a>
+		<a href="https://open.spotify.com/artist/2sSGPbdZJkaSE2AbcGOACx?si=LVWx2YOaSGKEiybeAgIaZA" target="_blank" id="artist5" class="map-artist">The Marias</a>
+	</div>
+	
+	<p id="result">Click an artist above!</p>
+
+	<div class="button-container">
+		<button onclick="toggleVisibility(this)">Can't find what you're looking for?</button>
+		<div class="hidden">
+			<p id="black">Oops, looks like what you're searching for is invisible.<br>
+			Try searching for something a little less hipster, please.</p>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/mfhBM_Yay6w?si=8DT7aa4zNoWzX8vt&amp;start=56" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+		</div>
+	</div>
+
+	<div class="bottom-banner">
+		<nav class="nav-menu">
+			<a href="voyage.html">Voyage</a>
+			<a href="identities.html">Identities</a>
+			<a href="bridges.html">Bridges</a>
+			<a href="eras.html">Eras</a>
+			<a href="showtime.html">Showtime</a>
+		</nav>
+	</div>
+
+	<style>
+		.music-map {
+			position: relative;
+			width: 500px;
+			height: 300px;
+			background-color: #f8f9fa;
+			border: 2px solid #616DC4;
+			margin: 20px auto;
+		}
+		
+		#center {
+			position: absolute;
+			left: 200px;
+			top: 120px;
+			background-color: #616DC4;
+			color: white;
+			padding: 10px;
+			border-radius: 15px;
+			font-family: 'Grandstander', sans-serif;
+		}
+		
+		.map-artist {
+			position: absolute;
+			background-color: white;
+			border: 2px solid #616DC4;
+			color: #616DC4;
+			padding: 8px;
+			border-radius: 10px;
+			font-family: 'Montserrat', sans-serif;
+			cursor: pointer;
+		}
+		
+		#artist1 {
+			left: 50px;
+			top: 50px;
+		}
+		
+		#artist2 {
+			left: 350px;
+			top: 50px;
+		}
+		
+		#artist3 {
+			left: 50px;
+			top: 200px;
+		}
+		
+		#artist4 {
+			left: 350px;
+			top: 200px;
+		}
+		
+		#artist5 {
+			left: 400px;
+			top: 120px;
+		}
+	</style>
+
+	<script>
+		function toggleVisibility(button) {
+			const detailsDiv = button.nextElementSibling;
+			if (detailsDiv.style.display === "none" || detailsDiv.style.display === "") {
+				detailsDiv.style.display = "block";
+			} else {
+				detailsDiv.style.display = "none";
+			}
+		}
+		
+		var artist1 = document.querySelector("#artist1");
+		var artist2 = document.querySelector("#artist2");
+		var artist3 = document.querySelector("#artist3");
+		var artist4 = document.querySelector("#artist4");
+		var artist5 = document.querySelector("#artist5");
+		var result = document.querySelector("#result");
+		
+		artist1.addEventListener("click", showClairo);
+		artist2.addEventListener("click", showGracie);
+		artist3.addEventListener("click", showBoy);
+		artist4.addEventListener("click", showRex);
+		artist5.addEventListener("click", showMarias);
+		
+		function showClairo() {
+			result.textContent = "Clairo: Bedroom pop with dreamy vocals!";
+		}
+		
+		function showGracie() {
+			result.textContent = "Gracie Abrams: Indie folk with emotional lyrics!";
+		}
+		
+		function showBoy() {
+			result.textContent = "Boy Pablo: Norwegian indie pop vibes!";
+		}
+		
+		function showRex() {
+			result.textContent = "Rex Orange County: Jazz-influenced indie pop!";
+		}
+		
+		function showMarias() {
+			result.textContent = "The Marias: Dreamy bilingual indie pop!";
+		}
+	</script>
+</body>
+</html>
