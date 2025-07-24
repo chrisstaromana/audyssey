@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+	<title>Audyssey</title>
+	<link rel="stylesheet" type="text/css" href="identities.css">
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="keywords" content="HTML">
+</head>
+<body>
+	<div class="top-banner">
+  <a href="javascript:history.back()" aria-label="Go back to previous page">
+  <img src="Group 5.png" alt="Go Back" class="logo" title="Go Back">
+</div>
+<div class="top-banner">
+  <nav class="nav-menu">
+    <a href="voyage.html">Voyage</a>
+    <a href="identities.html">Identities</a>
+    <a href="bridges.html">Bridges</a>
+    <a href="eras.html">Eras</a>
+    <a href="showtime.html">Showtime</a>
+  </nav>
+</div>
+<br>
+<h2>Test your fandom. Travel through sound. Discover yourself.</h2>
+<div class="search-full">
+  <input type="text" id="searchInput" placeholder="Search artists..." class="search-bar-large" onkeyup="filterArtists()">
+</div>
+
+<ul id="artistList">
+  <li><a href="voyage.html">Laufey</a></li>
+  <li><a href="identities.html">The Indigo Girls</a></li>
+  <li><a href="bridges.html">Good Neighbours</a></li>
+  <li><a href="eras.html">Kendrick Lamar</a></li>
+  <li><a href="showtime.html">Drake</a></li>
+</ul>
+<br>
+<p>Explore what your favourite artist says about you, your past and the world around them.</p>
+<br>
+<div class="bottom-banner">
+	<nav class="nav-menu">
+	<a href="voyage.html">Voyage</a>
+    <a href="identities.html">Identities</a>
+    <a href="bridges.html">Bridges</a>
+    <a href="eras.html">Eras</a>
+    <a href="showtime.html">Showtime</a>
+</nav>
+</div>
+<script>
+	function filterArtists() {
+  const input = document.getElementById('searchInput');
+  const filter = input.value.toLowerCase();
+  const ul = document.getElementById('artistList');
+  const li = ul.getElementsByTagName('li');
+
+  for (let i = 0; i < li.length; i++) {
+    const artistName = li[i].textContent || li[i].innerText;
+    if (artistName.toLowerCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+</body>
+</html>

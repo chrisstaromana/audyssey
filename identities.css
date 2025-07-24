@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@400;500;700&family=Montserrat:wght@400;500;700&display=swap');
+
+.top-banner {
+  background-color: #616DC4;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 0;
+  z-index: 1000;
+}
+
+.bottom-banner {
+	background-color: #616DC4;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.logo {
+  height: 60px;
+  margin-right: 15px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.logo:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 40px;
+}
+
+.search-full {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+}
+
+#artistList {
+  list-style: none;
+  padding: 0;
+  max-width: 400px;
+  margin: 20px auto;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+
+}
+
+#artistList li {
+  padding: 8px 12px;
+  border-bottom: 1px solid #ccc;
+}
+
+#artistList li:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+  color: black;
+  text-decoration: none;
+}
+
+#artistList a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  }
+
+.search-bar-large {
+  width: 50%;
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-family: 'Grandstander', sans-serif;
+  font-size: 16px;
+  display: block;
+  margin: 0 auto;
+}
+
+a {
+  color: white;
+  font-family: 'Grandstander', sans-serif;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+#black a {
+	color: black;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+	text-align: center;
+	text-decoration: underline;
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1 {font-family: 'Grandstander', sans-serif;
+	font-weight: 700;
+	font-size: 54px;
+	text-align: center;
+}
+
+h2 {font-family: 'Grandstander', sans-serif;
+	text-align: center;
+	font-size: 48px;
+}
+
+p {font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+	text-align: center;
+
+}
+
+table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+td {
+  width: 25%;
+  vertical-align: top;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+th {
+	width: 25%;
+  vertical-align: top;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-size: 32px;
+}
+
+td button {
+	margin-top: 10px;
+  display: inline-block;
+  background-color: #616DC4;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 4px;
+  padding: 2px 16px;
+  font-size: 18px;  
+
+}
+
+button{
+  color: #616DC4;
+  background-color: #FFFFFF;
+  border: #616DC4;
+  font-family: 'Grandstander', sans-serif;
+	text-align: center;
+	font-size: 32px;
+}
+
+.button-container button:hover {
+  background-color: #4e59a8;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button-container {
+	display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.flex-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+ .hidden {
+    	display: none;
+    }

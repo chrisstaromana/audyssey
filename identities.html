@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+	<title>Identities</title>
+	<link rel="stylesheet" type="text/css" href="identities.css">
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="keywords" content="HTML">
+</head>
+<body>
+	<div class="top-banner">
+  <a href="javascript:history.back()" aria-label="Go back to previous page">
+  <img src="Group 5.png" alt="Go Back" class="logo" title="Go Back">
+</a>
+</div>
+<div class="top-banner">
+  <nav class="nav-menu">
+    <a href="voyage.html">Voyage</a>
+    <a href="identities.html">Identities</a>
+    <a href="bridges.html">Bridges</a>
+    <a href="eras.html">Eras</a>
+    <a href="showtime.html">Showtime</a>
+  </nav>
+</div>
+	<h1>Identities</h1>
+	<h2>If you like The Indigo Girls</h2>
+	<div class="flex-container">
+	<a href="https://www.indigogirls.com/">
+  <img src="Indigo Girls.png" alt="The Indigo Girls" class="logo" style="height: 300px;"></a>
+</div>
+	<h2>You Are</h2>
+		<table>
+  <tr>
+    <th>Open Minded</th>
+	<th>Compassionate</th>
+	<th>Inquisitive</th>
+	<th>Resilient</th>
+  </tr>
+  <tr id="black">
+    <td>
+    	<button onclick="toggleVisibility(this)">Click To Learn More</button>
+      <div class="hidden"><br>You are open and welcoming to all, and you like trying new things even if they’re not popular. The Indigo Girls have been out as gay since their debut in 1987 and they’ve never been ashamed to call out any intolerance. <br> Your open minded song is: <a href="https://www.youtube.com/watch?v=dI1keSSwdcI&list=RDdI1keSSwdcI&start_radio=1">Galileo</a>
+      </div>
+</td>
+    <td>
+    	<button onclick="toggleVisibility(this)">Click To Learn More</button>
+      <div class="hidden"><br>You are compassionate to everyone no matter their background, and believe in treating all people with kindness. The Indigo Girls are big in the activism world and have been environmental activists since before it was cool to be an activist. <br> Your compassionate song is: <a href="https://www.youtube.com/watch?v=HKqUglOC3_8&list=RDHKqUglOC3_8&start_radio=1">Shame on you</a>
+      </div>
+</td>
+    <td><button onclick="toggleVisibility(this)">Click To Learn More</button>
+      <div class="hidden"><br>You are a thoughtful and introspective person who thinks things through. Many of the Indigo Girls’ songs follow an introspective journey and ask some big life questions. <br> Your inquisitive song is: <a href="https://www.youtube.com/watch?v=HUgwM1Ky228&list=RDHUgwM1Ky228&start_radio=1">Closer to Fine</a>
+      </div>
+</td>
+    <td><button onclick="toggleVisibility(this)">Click To Learn More</button>
+      <div class="hidden"><br>You are a strong individual who perseveres through hard times. The Indigo Girls have been releasing music that still continues to touch hearts for close to four decades, that takes perseverance and resiliency.<br> Your resilient song is: <a class="black" href="https://www.youtube.com/watch?v=yTI2GGNFR_U&list=RDyTI2GGNFR_U&start_radio=1">Hammer and a Nail</a>
+      </div>
+</td>
+  </tr>
+</table>
+<div class="button-container">
+		<button onclick="toggleVisibility(this)">Click here to explore other musicians who are associated with these traits:
+		</button>
+		<div class="hidden"><p id="black"><strong>Open minded:</strong> <a href="https://en.wikipedia.org/wiki/Cynthia_Erivo">Cynthia Erivo</a>, <strong>Compassionate:</strong> <a href="https://en.wikipedia.org/wiki/Alicia_Keys">Alicia Keys</a>, <strong>Inquisitive:</strong> <a href="https://en.wikipedia.org/wiki/Taylor_Swift">Taylor Swift</a>, <strong>Resilient:</strong> <a href="https://en.wikipedia.org/wiki/Celine_Dion">Céline Dion</a></p>
+		</div>
+	</div>
+
+<div class="bottom-banner">
+	<nav class="nav-menu">
+	<a href="voyage.html">Voyage</a>
+    <a href="identities.html">Identities</a>
+    <a href="bridges.html">Bridges</a>
+    <a href="eras.html">Eras</a>
+    <a href="showtime.html">Showtime</a>
+</nav>
+</div>
+<script>
+	function toggleVisibility(button) {
+    const detailsDiv = button.nextElementSibling;
+    if (detailsDiv.style.display === "none" || detailsDiv.style.display === "") {
+      detailsDiv.style.display = "block";
+    } else {
+      detailsDiv.style.display = "none";
+    }
+  }
+</script>
+	</body>
+	</html>
