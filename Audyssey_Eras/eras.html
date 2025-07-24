@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eras | Kendrick Lamar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Grandstander:wght@400;500;700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="eras_style.css">
+</head>
+<body>
+
+<!--Audyssey Banner-->
+<div class="top-banner">
+  <a href="javascript:history.back()" aria-label="Go back to previous page">
+    <img src="Group 5.png" alt="Go Back" class="logo" title="Go Back">
+  </a>
+</div>
+<div class="top-banner">
+  <nav class="nav-menu">
+    <a href="voyage.html">Voyage</a>
+    <a href="identities.html">Identities</a>
+    <a href="bridges.html">Bridges</a>
+    <a href="eras.html">Eras</a>
+    <a href="showtime.html">Showtime</a>
+  </nav>
+</div>
+
+<!--Eras | Hero Section-->
+<section id="hero-section">
+  <div id="hero-container">
+    <img src="eras_kendrick.gif" alt="Kendrick Lamar in action" id="hero-gif">
+    <div id="hero-overlay">
+      <h1>Kendrick Lamar</h1>
+      <p id="birth">Hip-Hop Genius. Voice of Resistance. <br> Born 1987, rose to prominence in the 2010s.</p>
+      <p id="lyric">You vandalize my perception<br>but can't take style from me.</p>
+      <div id="hero-buttons">
+        <button class="cta-button" onclick="scrollToSection('themes-section')">Take Me to the Eras</button>
+        <a href="javascript:history.back()" aria-label="Go back to previous page" class="cta-button">Change Artist</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Eras | Bio Section -->
+<section id="bio-section" class="fade-in">
+  <div id="bio-container">
+    <img src="eras_kendrick_bio.jpg" alt="Kendrick Lamar winning Grammy" class="bio-img">
+    <div id="bio-info">
+      <p>Kendrick Lamar wrote about culture, politics, and identity, vividly depicting modern Black American life and critiquing systemic oppression.</p>
+      <ul>
+        <li><strong>2012:</strong> Kendrick released <em>good kid, m.A.A.d city</em>, his breakthrough album to global fame and critical acclaim.</li>
+        <li><strong>2015:</strong> <em>To Pimp a Butterfly</em> pushed boundaries in genre and social commentary, cementing him as a cultural juggernaut.</li>
+        <li><strong>2017:</strong> <em>DAMN.</em> made Kendrick the first rapper to ever win a Pulitzer Prize.</li>
+        <li><strong>2022:</strong> <em>Mr. Morale and The Big Steppers</em> explored vulnerability and personal growth alongside an artistic expansion.</li>
+        <li><strong>2024:</strong> Kendrick returns to his roots after his highly publicized Drake feud with <em>GNX.</em></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!--Eras | Themes and Eras Section -->
+<section id="themes-section" class="fade-in">
+  <h2>How the Eras Shaped the Music</h2>
+  <p id="section-intro">Click a song theme to explore the era, relevant work, and similar.</p>
+  <div id="themes-grid">
+    <div class="theme-card" data-theme="Identity">
+      <span class="era-year">2012</span>
+      <span class="era-theme">Identity</span>
+    </div>
+    <div class="theme-card" data-theme="Social Justice">
+      <span class="era-year">2015</span>
+      <span class="era-theme">Social Justice</span>
+    </div>
+    <div class="theme-card" data-theme="Fame & Morality">
+      <span class="era-year">2017</span>
+      <span class="era-theme">Fame & Morality</span>
+    </div>
+    <div class="theme-card" data-theme="Community">
+      <span class="era-year">2022</span>
+      <span class="era-theme">Community</span>
+    </div>
+    <div class="theme-card" data-theme="Resilience">
+      <span class="era-year">2024</span>
+      <span class="era-theme">Resilience</span>
+    </div>
+  </div>
+
+  <div id="theme-details">
+    <p id="default-msg">Details will appear here</p>
+  </div>
+</section>
+
+<div class="bottom-banner">
+  <nav class="nav-menu">
+    <a href="voyage.html">Voyage</a>
+    <a href="identities.html">Identities</a>
+    <a href="bridges.html">Bridges</a>
+    <a href="eras.html">Eras</a>
+    <a href="showtime.html">Showtime</a>
+  </nav>
+</div>
+
+<script>
+// DOM elements
+  const bioImg = document.querySelector('.bio-img');
+  const themeCards = document.querySelectorAll('.theme-card');
+  const themeDetails = document.getElementById('theme-details');
+  const faders = document.querySelectorAll('.fade-in');
+
+// themes data extract
+  const themesData = {
+    "Identity": {
+      description: "Navigating life in Compton, GKMC captured identity struggles amid Obama era optimism and the rise of social media.",
+      lyric: "Everybody gon' respect the shooter, but the one in front of the gun lives forever. <br> - Money Trees (2012)",
+      album: { title: "good kid, m.A.A.d city", year: "2012", img: "gkmc.jpg", link: "https://open.spotify.com/album/3DGQ1iZ9XKUQxAUWjfC34w" },
+      artists: [
+        { name: "Lupe Fiasco", img: "lupe.jpg", link: "https://open.spotify.com/artist/01QTIT5P1pFP3QnnFSdsJf" },
+        { name: "Frank Ocean", img: "frankocean.jpg", link: "http://open.spotify.com/artist/2h93pZq0e7k5yf4dywlkpM" }
+      ]
+    },
+    "Social Justice": {
+      description: "TPAB channeled the pain and pride of Black America during the Ferguson protests and the BLM movement.",
+      lyric: "If the government want me dead, plant cocaine in my car. Would you judge me a drug-head or see me as K. Lamar? <br> - Mortal Man (2015)",
+      album: { title: "To Pimp a Butterfly", year: "2015", img: "tpab.jpg", link: "https://open.spotify.com/album/7ycBtnsMtyVbbwTfJwRjSP" },
+      artists: [
+        { name: "J. Cole", img: "cole.jpg", link: "https://open.spotify.com/artist/6l3HvQ5sa6mXTsMTB19rO5" },
+        { name: "Common", img: "common.jpg", link: "https://open.spotify.com/artist/2GHclqNVjqGuiE5mA7BEoc" }
+      ]
+    },
+    "Fame & Morality": {
+      description: "In a polarized Trump era, DAMN. wrestled with faith, virtue, and the price of celebrity, earning a Pulitzer.",
+      lyric: "It was always me versus the world until I found it's me versus me. <br> - DUCKWORTH. (2017)",
+      album: { title: "DAMN.", year: "2017", img: "damn.jpg", link: "https://open.spotify.com/album/4eLPsYPBmXABThSJ821sqY" },
+      artists: [
+        { name: "Kanye West", img: "kanye.jpg", link: "https://open.spotify.com/artist/5K4W6rqBFWDnAN6FQUkS6x" },
+        { name: "Drake", img: "drake.jpg", link: "https://open.spotify.com/artist/3TVXtAsR1Inumwj472S9r4" }
+      ]
+    },
+    "Community": {
+      description: "Mr. Morale explored healing and accountability after the pandemic, grappling with mental health.",
+      lyric: "Sorry I didn't save the world, my friend. I was too busy building mine again. <br> - Mirror (2022)",
+      album: { title: "Mr. Morale & The Big Steppers", year: "2022", img: "mmtbs.jpg", link: "https://open.spotify.com/album/1atjqOZTCdrjxjMyCPZc2g" },
+      artists: [
+        { name: "The Game", img: "game.jpg", link: "https://open.spotify.com/artist/0NbfKEOTQCcwd6o7wSDOHI" },
+        { name: "Nipsey Hussle", img: "nipsey.jpg", link: "https://open.spotify.com/artist/0EeQBlQJFiAfJeVN2vT9s0" }
+      ]
+    },
+    "Resilience": {
+      description: "Emerging in the age of AI and corporatism in music, GNX reclaimed West Coast pride and independence.",
+      lyric: "Dangerously, nothing changed with me, still got pain in me. Flip a coin, want the shameless me or the famous me? <br> - man at the garden (2024)",
+      album: { title: "GNX", year: "2024", img: "gnx.jpg", link: "#" },
+      artists: [
+        { name: "JAY-Z", img: "jayz.jpg", link: "https://open.spotify.com/artist/3nFkdlSjzX9mRTtwJOzDYB" },
+        { name: "Nicki Minaj", img: "nickiminaj.jpg", link: "https://open.spotify.com/artist/0hCNtLu0JehylgoiP8L4Gh" }
+      ]
+    }
+  };
+
+// functions
+  function scrollToSection(sectionId) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  function renderDefaultMessage() {
+    themeDetails.innerHTML = `<p id="default-msg">Details will appear here</p>`;
+  }
+
+  function renderThemeDetails(theme) {
+    const data = themesData[theme];
+    if (!data || !themeDetails) return;
+
+    themeDetails.innerHTML = `
+    <button class="close-button" aria-label="Close">&times;</button>
+
+    <div class="theme-description">
+      <h3>${theme}</h3>
+      <p>${data.description}</p>
+      <blockquote class="theme-callout">
+        ${data.lyric}
+      </blockquote>
+    </div>
+
+    <div class="featured-section">
+      <h4>Featured Album:</h4>
+      <div class="albums-grid">
+        <a href="${data.album.link}" target="_blank" class="album-card">
+          <div class="album-img-container">
+            <img src="${data.album.img}" alt="${data.album.title}">
+            <div class="album-overlay">${data.album.title} (${data.album.year})</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="artists-section">
+      <h4>Artists with Similar Themes:</h4>
+      <div class="artists-grid">
+      ${data.artists.map(artist => `
+          <a href="${artist.link}" target="_blank" class="artist-card">
+            <img src="${artist.img}" alt="${artist.name}">
+            <p>${artist.name}</p>
+          </a>
+        `).join('')}
+      </div>
+    </div>
+    `;
+  }
+
+// event listeners
+  bioImg.addEventListener('mouseover', () => {
+    bioImg.src = 'eras_kendrick_bio_alt.jpg'; 
+  });
+
+  bioImg.addEventListener('mouseout', () => {
+    bioImg.src = 'eras_kendrick_bio.jpg'; 
+  });
+
+  themeDetails.addEventListener('click', (event) => {
+    if (event.target.id === 'close-theme') {
+      renderDefaultMessage();
+    }
+  });
+
+  themeCards.forEach(card => {
+    card.addEventListener('click', () => {
+      const theme = card.getAttribute('data-theme');
+      renderThemeDetails(theme);
+    });
+  });
+
+// intersection Observer for fade-in animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  faders.forEach(fadeEl => observer.observe(fadeEl));
+</script>
+</body>
+</html>
