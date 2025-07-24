@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="voyage.css">
+  <title>Voyage</title>
+</head>
+<body>
+
+<!-- Top Banner -->
+<div class="top-banner">
+  <a href="javascript:history.back()" aria-label="Go back to previous page">
+  <img src="Group 5.png" alt="Go Back" class="logo" title="Go Back">
+</a>
+</div>
+<div class="top-banner">
+  <nav class="nav-menu">
+    <a href="voyage.html">Voyage</a>
+    <a href="identities.html">Identities</a>
+    <a href="bridges.html">Bridges</a>
+    <a href="eras.html">Eras</a>
+    <a href="showtime.html">Showtime</a>
+  </nav>
+</div>
+
+<div class="intro-text">
+  <h1>If her sound isn’t new, where have we heard it before?</h1>
+</div>
+
+  <div class="timeline">
+
+    <!-- Laufey (2020s) -->
+    <section class="timeline-section">
+      <h2>2020s</h2>
+      <div class="content-block">
+        <img src="images/Laufey.png" alt="Laufey">
+        <div class="text-overlay">
+        <h3>Laufey</h3>
+        <p>Laufey blends classical and jazz with Gen Z intimacy. A modern artist with a timeless sound, Laufey blends classical, jazz, and bedroom pop to create music that feels timeless. Her voice is soft but commanding, and her songs feel like conversations whispered across decades..</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lana Del Rey (2010s) -->
+    <section class="timeline-section">
+      <h2>2010s</h2>
+      <div class="content-block">
+        <img src="images/Lana.png" alt="Lana Del Rey">
+        <div class="text-overlay">
+        <h3>Lana Del Rey</h3>
+        <p>Lana brought melancholia and romantic nostalgia back into pop in the 2010s. Like Laufey, she leans into vintage aesthetics and introspective lyrics, building a world where softness is a statement. </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Regina Spektor (2000s) -->
+    <section class="timeline-section">
+      <h2>2000s</h2>
+      <div class="content-block">
+        <img src="images/Regina.png" alt="Regina Spektor">
+        <div class="text-overlay">
+        <h3>Regina Spektor</h3>
+        <p>Regina Spektor fused classical piano with quirky, poetic storytelling — paving the way for artists like Laufey to blend formal training with emotional vulnerability. Both write songs that feel like diary entries wrapped in melody.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Norah Jones (1990s-style) -->
+    <section class="timeline-section">
+      <h2>1990s</h2>
+      <div class="content-block">
+        <img src="images/Norah.png" alt="Norah Jones">
+        <div class="text-overlay">
+        <h3>Norah Jones</h3>
+        <p>Though she debuted in the early 2000s, Norah Jones’s sound is rooted in '90s-era coffeehouse jazz — warm, minimal, and emotional. Laufey carries that same quiet intimacy, favoring simplicity over spectacle.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sade (1980s) -->
+    <section class="timeline-section">
+      <h2>1980s</h2>
+      <div class="content-block">
+        <img src="images/Sade.png" alt="Sade">
+        <div class="text-overlay">
+        <h3>Sade</h3>
+        <p>Sade's smooth, restrained delivery gave space to emotion without overpowering it. Laufey follows that same tradition: understated, elegant, and deeply felt, proving that softness can still leave a mark.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Carole King (1970s) -->
+    <section class="timeline-section">
+      <h2>1970s</h2>
+      <div class="content-block">
+        <img src="images/Carole.png" alt="Carole King">
+        <div class="text-overlay">
+        <h3>Carole King</h3>
+        <p>Carole King’s songwriting captured everyday emotion with grace and honesty. Laufey echoes that same confessional tone: intimate and melodic, like a letter set to music.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Astrud Gilberto (1960s) -->
+    <section class="timeline-section">
+      <h2>1960s</h2>
+      <div class="content-block">
+        <img src="images/Astrud.png" alt="Astrud Gilberto">
+        <div class="text-overlay">
+        <h3>Astrud Gilberto</h3>
+        <p>Astrud’s airy voice and bossa nova rhythms made vulnerability feel chic and effortless. Laufey’s phrasing and tone feel like a modern continuation of that soft, whispery tradition — romantic, subtle, and timeless.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+<!-- Bottom Banner -->
+<div class="bottom-banner">
+  <nav class="nav-menu">
+  <a href="voyage.html">Voyage</a>
+    <a href="identities.html">Identities</a>
+    <a href="bridges.html">Bridges</a>
+    <a href="eras.html">Eras</a>
+    <a href="showtime.html">Showtime</a>
+</nav>
+</div>
+
+
+<script>
+  const sections = document.querySelectorAll('.timeline-section');
+  const observer = new IntersectionObserver((entries) => {
+    
+
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        activeSection = entry.target;
+      }
+    });
+
+    if (activeSection) {
+      sections.forEach(section => section.classList.remove('active'));
+      activeSection.classList.add('active');
+    }
+  }, {
+    root: null,
+    rootMargin: '-30% 0px -30% 0px', // Top and bottom margins push detection zone toward the center
+    threshold: 0
+  });
+
+  sections.forEach(section => observer.observe(section));
+</script>
+
+</body>
+</html>
+
+

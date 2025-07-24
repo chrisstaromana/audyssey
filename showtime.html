@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Audyssey–Showtime</title>
+    <link rel="icon" type="image" href="favicon.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Grandstander:wght@400;500;700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        body
+        {
+        margin: 0;
+        font-family: 'Montserrat', sans-serif;
+        background: #fff;
+        color: #000;
+        }
+
+        html
+        {
+        scroll-behavior: smooth;
+        }
+
+        .top-banner
+        {
+        background-color: #616DC4;
+        color: white;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        top: 0;
+        z-index: 1000;
+        }
+
+        .bottom-banner
+        {
+        background-color: #616DC4;
+        color: white;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        }
+
+        .logo
+        {
+        height: 60px;
+        margin-right: 15px;
+        cursor: pointer;
+        transition: opacity 0.3s ease;
+        }
+
+        .logo:hover
+        {
+        opacity: 0.8;
+        transform: scale(1.05);
+        transition: all 0.3s ease;
+        }
+
+        .nav-menu
+        {
+        display: flex;
+        gap: 40px;
+        }
+
+        a
+        {
+        color: white;
+        font-family: 'Grandstander', sans-serif;
+        text-decoration: none;
+        font-weight: 500;
+        }
+
+        h1
+        {
+        font-family: 'Grandstander', sans-serif;
+        font-weight: 700;
+        font-size: 54px;
+        text-align: center;
+        margin: 32px;
+        }
+
+        h3
+        {
+        font-family: 'Grandstander', sans-serif;
+        font-size: 24px;
+        margin-bottom: 0.5rem;
+        }
+
+        p
+        {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        text-align: center;
+        }
+
+        .container
+        {
+        display: flex;
+        max-width: 1200px;
+        margin: 0 auto;
+        height: auto;
+        }
+
+        .left-panel
+        {
+        flex: 0 0 480px;
+        padding: 24px;
+        position: sticky;
+        text-align: center;
+        }
+
+        .left-panel img
+        {
+        width: 100%;
+        border-radius: 10px;
+        }
+
+        .artist-name
+        {
+        margin-top: 24px;
+        font-size: 32px;
+        font-weight: bold;
+        font-family: 'Grandstander', sans-serif;
+        }
+
+        .quiz-section
+        {
+        flex: 1;
+        margin-top: 24px;
+        margin-left: 32px;
+        }
+
+        .question
+        {
+        margin-bottom: 24px;
+        }
+
+        .options label
+        {
+        display: block;
+        margin: 12px 0;
+        cursor: pointer;
+        }
+
+        .submit-btn
+        {
+        margin: 24px;
+        padding: 10px 20px;
+        background-color: #616DC4;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        }
+
+        .reset-btn
+        {
+        margin-left: 24px;
+        padding: 10px 20px;
+        background-color: white;
+        color: #616DC4;
+        border-color: #616DC4;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        }
+
+        .score
+        {
+        font-weight: bold;
+        font-family: 'Grandstander', sans-serif;
+        margin-bottom: 24px;
+        }
+
+        .correct
+        {
+        color: green;
+        font-weight: bold;
+        }
+
+        .incorrect
+        {
+        color: red;
+        font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+
+  <div class="top-banner">
+    <a href="javascript:history.back()" aria-label="Go back to previous page">
+      <img src="Logo.png" alt="Go Back" class="logo" title="Go Back">
+    </a>
+  </div>
+
+  <div class="top-banner">
+    <nav class="nav-menu">
+      <a href="voyage.html">Voyage</a>
+      <a href="identities.html">Identities</a>
+      <a href="bridges.html">Bridges</a>
+      <a href="eras.html">Eras</a>
+      <a href="showtime.html">Showtime</a>
+    </nav>
+  </div>
+
+  <h1>Showtime Quiz: Drake Edition</h1>
+
+  <div class="container">
+    <div class="left-panel">
+      <img src="drake.jpeg" alt="Drake">
+      <div class="artist-name">Drake</div>
+    </div>
+
+    <div class="quiz-section">
+      <form id="quizForm">
+
+        <div class="question" data-correctans="2">
+          <h3>1. What was Drake's debut studio album?</h3>
+          <div class="options">
+            <label><input type="radio" name="q1" value="1"> More Life</label>
+            <label><input type="radio" name="q1" value="2"> Thank Me Later</label>
+            <label><input type="radio" name="q1" value="3"> Views</label>
+            <label><input type="radio" name="q1" value="4"> Nothing Was the Same</label>
+          </div>
+        </div>
+
+        <div class="question" data-correctans="3">
+          <h3>2. Which TV series gave Drake early fame?</h3>
+          <div class="options">
+            <label><input type="radio" name="q2" value="1"> Riverdale</label>
+            <label><input type="radio" name="q2" value="2"> Glee</label>
+            <label><input type="radio" name="q2" value="3"> Degrassi</label>
+            <label><input type="radio" name="q2" value="4"> Euphoria</label>
+          </div>
+        </div>
+
+        <div class="question" data-correctans="4">
+          <h3>3. What is Drake’s real first name?</h3>
+          <div class="options">
+            <label><input type="radio" name="q3" value="1"> Trey</label>
+            <label><input type="radio" name="q3" value="2"> Shawn</label>
+            <label><input type="radio" name="q3" value="3"> Malik</label>
+            <label><input type="radio" name="q3" value="4"> Aubrey</label>
+          </div>
+        </div>
+
+        <div class="question" data-correctans="1">
+          <h3>4. Which of these is one of Drake's hit songs?</h3>
+          <div class="options">
+            <label><input type="radio" name="q4" value="1"> God's Plan</label>
+            <label><input type="radio" name="q4" value="2"> Rockstar</label>
+            <label><input type="radio" name="q4" value="3"> Bad Guy</label>
+            <label><input type="radio" name="q4" value="4"> Blinding Lights</label>
+          </div>
+        </div>
+
+        <div class="question" data-correctans="2">
+          <h3>5. What city is Drake famously associated with?</h3>
+          <div class="options">
+            <label><input type="radio" name="q5" value="1"> Vancouver</label>
+            <label><input type="radio" name="q5" value="2"> Toronto</label>
+            <label><input type="radio" name="q5" value="3"> Montreal</label>
+            <label><input type="radio" name="q5" value="4"> New York</label>
+          </div>
+        </div>
+
+        <button type="button" class="submit-btn" onclick="submitQuiz()">Submit</button>
+        <button type="button" class="reset-btn" onclick="resetQuiz()">Reset</button>
+        <div id="scoreDisplay" class="score"></div>
+      </form>
+    </div>
+  </div>
+
+  <div class="bottom-banner">
+    <nav class="nav-menu">
+      <a href="voyage.html">Voyage</a>
+      <a href="identities.html">Identities</a>
+      <a href="bridges.html">Bridges</a>
+      <a href="eras.html">Eras</a>
+      <a href="showtime.html">Showtime</a>
+    </nav>
+  </div>
+
+    <script>
+        function submitQuiz()
+        {
+        let score = 0;
+        const questions = document.querySelectorAll(".question");
+
+        questions.forEach((q, index) =>
+            {
+                const correct = q.dataset.correctans;
+                const name = "q" + (index + 1);
+                const selected = q.querySelector('input:checked');
+                const labels = q.querySelectorAll("label");
+
+                labels.forEach(label => label.classList.remove("correct", "incorrect"));
+
+                if (selected)
+                {
+                    if (selected.value === correct) 
+                    {
+                        score++;
+                        selected.parentElement.classList.add("correct");
+                    }
+                    else
+                    {
+                        selected.parentElement.classList.add("incorrect");
+                        const correctInput = q.querySelector(`input[name="${name}"][value="${correct}"]`);
+                        if (correctInput)
+                        {
+                            correctInput.parentElement.classList.add("correct");
+                        }
+                    }
+                }
+            }
+                        );
+
+        document.getElementById("scoreDisplay").textContent = `Your score: ${score} / ${questions.length}`;
+        }
+
+        function resetQuiz()
+        {
+            const form = document.getElementById("quizForm");
+            form.reset();
+            const allLabels = form.querySelectorAll("label");
+            allLabels.forEach(label => label.classList.remove("correct", "incorrect"));
+            document.getElementById("scoreDisplay").textContent = "";
+        }
+
+    </script>
+</body>
+</html>
